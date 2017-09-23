@@ -20,10 +20,10 @@ def parse_page(html):
             div5 = div1.find('div').find_all('span')[2].get_text()
             with open(r'C:\Users\Williams_Z\Desktop\movie5.txt','a+',encoding='utf-8') as f:
                 content=div2 + ';' + div3 + ';' + div4 +' '+'\\'+' '+ div5 +'\n'
-                f.write(content)
+                f.write(content)           # try 里面的写法框架需要理解掌握
         except:
             continue
-    time.sleep(1)
+    time.sleep(1)             # try,except 真的能解决很多debug
 
 def main(page):
     url='https://movie.douban.com/tag/%E7%83%82%E7%89%87?start={}'.format(page)
