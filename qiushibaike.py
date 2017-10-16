@@ -39,3 +39,8 @@ if __name__ == '__main__':
         
         
 #没能实现作者和笑话一一对应，因为匿名用户无法爬出，不知何故。
+
+#要写入TXT文件只需要把print换成下面的即可：
+        with open(r'C:\Users\Williams_Z\Desktop\movie2.txt', 'a+', encoding='utf-8') as f:
+            f.write(i+'/'+l)
+            f.write('-------------')
