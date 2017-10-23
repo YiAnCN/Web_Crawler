@@ -54,6 +54,11 @@ wait = WebDriverWait(driver, 10)
 element = wait.until(EC.element_to_be_clickable((By.ID,'someid')))
 
 
+
+# 判断某个给定的文本是否存在于指定的元素中
+用                   EC.text_to_be_present_in_element
+
+
     
     
    
