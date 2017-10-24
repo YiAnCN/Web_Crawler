@@ -26,4 +26,4 @@ MONGO_TABLE = 'toutiao'      # 表单名称
         return True
     return False
     
-5. 最后在 main 函数中调用一下save_to_mongo这个函数就可以了！
+5. 最后在函数中调用一下save_to_mongo这个函数就可以了！
