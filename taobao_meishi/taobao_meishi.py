@@ -1,3 +1,5 @@
+结合 pyquery,selenium 食用效果更佳！
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -52,7 +54,7 @@ def change_page(page_number):
     wait.until(
         EC.text_to_be_present_in_element(
             (By.CSS_SELECTOR, '#mainsrp-pager > div > div > div > ul > li.item.active > span'), str(page_number))
-    )
+    )                         #一定要转到第二页高亮，再查看CSS选择器
     parse_page()
 
 
@@ -82,11 +84,11 @@ def parse_page():
 def save_to_mongo(result):
     try:
         if db[MONGO_TABLE].insert(result):
-            print('Successfully Saved to Mongo', result)
+            print('Successfully Saved to Mongo')
             return True
         return False
     except Exception:
-        print('存储到mongodb失败', result)
+        print('存储到mongodb失败')
 
 
 def main():
