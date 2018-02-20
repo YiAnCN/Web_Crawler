@@ -23,10 +23,10 @@ def parse_for_page(html):
         except:
             continue
             
-------------------------import----------------------
+#------------------------import----------------------
     for i,l in zip(list2,list1):
         print(i+'/'+l)
-----------------------------------------------------
+#----------------------------------------------------
 
 def main(page):
     url='https://www.qiushibaike.com/8hr/page/{}/'.format(page)
