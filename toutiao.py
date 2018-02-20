@@ -18,13 +18,13 @@ def parse_page(html):
     try:
         Data=json.loads(html)
         if Data and 'data' in Data.keys():    #用于判断'data'是否在Data这个字典中，也可以写成 if 'data' in Data.keys():
-            ---------------------------------
+            #---------------------------------
             for item in Data.get('data'):
                 yield item.get('article_url')
-            --------------------------------
+            #--------------------------------
             for item in Data['data']:
                 yield item['article_url']
-            -------------------------------
+            #-------------------------------
             #两种写法均可以
     except:
         pass
