@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 
 def get_page(url):
     r=requests.get(url)
+    r.encoding = 'utf8'
     r.raise_for_status()
     return r.text
 
