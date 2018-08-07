@@ -9,10 +9,10 @@ def _format_addr(s):
     return formataddr((Header(name, 'utf-8').encode(), addr))
 
 def send_email(text):
-    user_mail = 'williams_z@yeah.net'
-    password = '1175137542qq'
-    send_mail = 'williams_z@139.com'
-    smtp_server = 'smtp.yeah.net'
+    user_mail = '*******'
+    password = '*******'
+    send_mail = '***********'
+    smtp_server = '*********'
 
     #MIMEText 一共有三个参数：第一个参数为“邮件正文”；第二个参数指定“文本类型”，这里我们指定的是 plain，即文本信息；第三个参数为“正文编码”
     msg = MIMEText(text, 'plain', 'utf-8')
